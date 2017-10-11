@@ -1,6 +1,7 @@
 import CoreLayout from '../layouts/CoreLayout';
 import UnAuthLayout from '../layouts/UnAuthLayout';
 import Home from './Home';
+import TeachAndQA from './TeachAndQA';
 
 import { PageNotFound, UnAuthorize } from './PageNotFound';
 
@@ -22,7 +23,13 @@ export const createRoutes = (store) => ([
   },
   {
     path: '/metadata',
+    indexRoute: Home(store),
     Component: CoreLayout
-  }
+  },
+  {
+    path: '/TeachAndQA',
+    indexRoute: TeachAndQA(store),
+    Component: CoreLayout
+  }//need to remove the TeachAndQA route
 ])
 export default createRoutes
