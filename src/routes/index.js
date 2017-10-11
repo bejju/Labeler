@@ -17,10 +17,7 @@ export const createRoutes = (store) => ([
     component: CoreLayout,
     indexRoute: UnAuthorize
   },
-  {
-    path: '*',
-    component: PageNotFound
-  },
+  
   {
     path: '/metadata',
     indexRoute: Home(store),
@@ -30,6 +27,10 @@ export const createRoutes = (store) => ([
     path: '/TeachAndQA',
     indexRoute: TeachAndQA(store),
     Component: CoreLayout
-  }//need to remove the TeachAndQA route
+  },//need to remove the TeachAndQA route
+  {
+    path: '*',
+    component: PageNotFound
+  }
 ])
 export default createRoutes
