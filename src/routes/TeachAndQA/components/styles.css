@@ -1,0 +1,59 @@
+.border-padding-50{
+    padding : 50px;
+}
+.padding-left-50{
+    padding-left: 50px;
+}
+.padding-left-30{
+    padding-left: 30px;
+}
+.padding-right-50{
+    padding-right: 50px;
+}
+.padding-bottom-20{
+    padding-bottom: 20px;
+}
+
+  /*---------------Teach and QA Dashboard ------------------------------ */
+   
+.title{
+    overflow: hidden;
+}
+
+.firstleft
+  {
+      float:left;
+       font-size: 30px;
+  }
+.firstright
+  {
+      font-size: 30px;
+       float: right;
+  }       
+
+.labelName
+  {
+      text-align: left;
+      font-size: 30px;
+  }
+
+.status
+  {
+      text-align: center;
+      font-size: 30px;
+  }
+
+.page
+  {
+      text-align:right;
+      font-size: 30px;
+  }
+
+.annotationsbox
+{
+    color:rgba(0, 183, 255, 0.705);
+    border: 2px solid;
+    border-color: rgba(255, 238, 0, 0.712);
+    padding: 8px;
+    font-size: 18px;
+}
