@@ -1,12 +1,11 @@
 export default {
   api: {
-    url: process.env.URL, //Added local URL modify this based on environment
-    host: process.env.HOST
+    url: 'http://localhost:9000', //Added local URL modify this based on environment
+    host: process.env.HOST,
+    FETCH_DOCUMENT_SETS: 'api/v1/document-sets/'
   },
   HTTP_Status:{
-    SUCCESS: '200',
-    UNAUTHORIZE: '401',
-    CREATE_SUCCESS: '201',
-    DELETE_SUCCESS: '204'
+    SUCCESS: 200,
+    UNAUTHORIZE: 401
   }
 };
