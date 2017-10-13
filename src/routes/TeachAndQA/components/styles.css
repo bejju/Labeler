@@ -10,6 +10,9 @@
 .padding-left-20{
     padding-left: 20px;
 }
+.padding-top-30{
+    padding-top: 30px;
+}
 .padding-left-10{
     padding-left: 10px;
 }
@@ -77,6 +80,7 @@ padding: 10px;
 
   .history
   {
+      width:84%;
     font-size: 20px; 
   }
 
@@ -196,4 +200,11 @@ border-radius: 5px;
 background-color: #efefef;
 border: 1px solid #b2abab;
 font-size: 18px;
+ }
+
+ .plusSymbol
+ {
+
+     color:#00C3FF;
+     padding-right: 10px;
  }

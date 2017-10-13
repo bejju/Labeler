@@ -6,8 +6,8 @@ import { Table, TableRow, TableRowColumn, TableHeader, TableBody } from 'materia
 export default class Annotation extends React.Component {
     render() {
         return (
-            <div className="annotations">
-                <h2>ANNOTATIONS</h2>
+            <div className="annotations padding-left-20 padding-top-30 padding-bottom-20">
+               <span className="fontStyle">ANNOTATIONS</span>
                 <div className="padding-left-30">
                     <Table selectable={false}>
                         <TableBody displayRowCheckbox={false}>
@@ -31,11 +31,10 @@ export default class Annotation extends React.Component {
                                     name='file'
                                     style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
                                 /></TableRowColumn>
-
                             </TableRow>
                         </TableBody>
                     </Table>
-                    <h4><a href="">+</a> New</h4>
+                    <span className="plusSymbol">+</span><span className="fontStyle2">New</span >
                 </div>
             </div>
         )

@@ -70,8 +70,8 @@ export default class Label extends React.Component {
         ]
 
         return (
-            <div className='padding-left-50 padding-right-50 padding-bottom-20'>
-                <h1>LABELS</h1>
+            <div className='padding-left-20 padding-right-50 padding-bottom-20 padding-top-30'>
+                <span className="fontStyle">LABELS</span>
                 <Component1 data={sampleLabelData} />
                 <Component2 data={sampleLabelData} />
                 <Component3 />
