@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from 'react-bootstrap';
 import { Toggle, RaisedButton, SelectField, MenuItem, TextField, LinearProgress } from 'material-ui'
 import PersonAdd from 'material-ui/svg-icons/social/person-add';
 import Delete from 'material-ui/svg-icons/action/delete';
