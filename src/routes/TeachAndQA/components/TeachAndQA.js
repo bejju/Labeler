@@ -49,7 +49,7 @@ class DocumentInfo extends React.Component {
             <div className="title">
                 <table>
                     <tr>
-                        <td><h2 className="labelName">MMS10-10-66-66.pdf</h2></td>
+                        <td><h2 className="labelName"><a href='#' value={this.props.id} onClick={(e) => this.props.viewPdf(e)}>MMS10-10-66-66.pdf</a></h2></td>
                         <td><h2 className="status">LABELED</h2></td>
                         <td><h2 className="page"><Pagination /></h2>
                         </td>

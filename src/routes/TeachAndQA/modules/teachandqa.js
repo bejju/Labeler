@@ -1,4 +1,4 @@
-import axios from '../../../lib/axios'
+import axios, {rails_instance} from '../../../lib/axios'
 import config from '../../../config'
 //action creators
 const SET_PROP = 'SET_PROP'
@@ -14,6 +14,7 @@ let SetRouteParams = function (routeParams) {
       }
     })
     dispatch(FetchDocumentSets())
+    dispatch(FetchLabels())
   }
 }
 
@@ -22,6 +23,26 @@ let FetchDocumentSets = function () {
     //let url = `${config.api.FETCH_DOCUMENT_SETS}${getState().teachandqa.routeParams.documentSetId}/documents?fields=id&q=${getState().teachandqa.search}`
     let url = `${config.api.FETCH_DOCUMENT_SETS}${getState().teachandqa.routeParams.documentSetId}/tags`
     axios.get(url).then((response) => {
+      console.log(`response: ${JSON.stringify(response)}`)
+      if (response.status === config.HTTP_Status.SUCCESS) {
+        dispatch({
+          type: SET_PROP,
+          payload: {
+            key: 'data',
+            value: response.data || []
+          }
+        })
+      }
+    }).catch((err) => {
+      console.log(`Error: ${JSON.stringify(err)}`)
+    })
+  }
+}
+
+let FetchLabels = function () {
+  return (dispatch, getState) => {
+    let url = `${config.Rails_api.FETCH_LABELS}`
+    rails_instance.get(url).then((response) => {
       if (response.status === config.HTTP_Status.SUCCESS) {
         console.log(`response: ${JSON.stringify(response)}`)
         dispatch({
@@ -39,6 +60,19 @@ let FetchDocumentSets = function () {
 }
 
 
+export function addLabel (e) {
+  return (dispatch, getState) => {
+    let url = `${config.Rails_api.FETCH_LABELS}`
+    rails_instance.post(url).then((response) => {
+      dispatch({
+        type: SET_PROP,
+        payload: true
+      })
+    }).catch((err) => {
+      console.log(`Error: ${JSON.stringify(err)}`)
+    })
+  }
+}
 
 const ACTION_HANDLERS = {
   [SET_PROP]: (state, action) => {
@@ -52,9 +86,9 @@ const ACTION_HANDLERS = {
 const initialState = {
   search: 'word'
 }
+
 export default function teachandqaReducer(state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type]
-
   return handler ? handler(state, action) : state
 }
 
