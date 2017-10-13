@@ -4,7 +4,7 @@ import PersonAdd from 'material-ui/svg-icons/social/person-add';
 import Delete from 'material-ui/svg-icons/action/delete';
 import './styles.css';
 import { Table, TableRow, TableRowColumn, TableHeader, TableBody } from 'material-ui/Table';
-
+var FontAwesome = require('react-fontawesome');
 
 const styles = {
     block: {
@@ -88,7 +88,7 @@ class Component1 extends React.Component {
                         {this.props.data.map((d, i) => (
                             <TableRow style={{ border: 'none' }}>
                                 <TableRowColumn style={{ width: 60 }}><div className="labelColorbox" style={{ backgroundColor: d.color }}></div></TableRowColumn>
-                                <TableRowColumn><h3>{d.name}</h3></TableRowColumn>
+                                <TableRowColumn fontArial><span className="fontStyle2">{d.name}</span></TableRowColumn>
                                 <TableRowColumn><LinearProgress mode="determinate" value={d.value} style={{ height: '30' }}></LinearProgress></TableRowColumn>
                                 <TableRowColumn><Toggle defaultToggled={d.toggle} thumbStyle={{ top: 5, left: 4, backgroundColor: "white" }} trackStyle={{ width: 70, height: 23 }} trackSwitchedStyle={{ backgroundColor: "#0ef485" }} /></TableRowColumn>
                             </TableRow>))}
@@ -100,25 +100,26 @@ class Component1 extends React.Component {
 }
 
 class Component2 extends React.Component {
-constructor()
-{
-    super();
-    this.state={
-        display:false
+    constructor() {
+        super();
+        this.state = {
+            display: false
+        }
     }
-}
-changeDisplay() {                                  
-   this.setState({display:!this.state.display});
-};
+    changeDisplay() {
+        this.setState({ display: !this.state.display });
+    };
 
     render() {
         return (
-            <div className='padding-bottom-20'>
-                <div className="dropdown">
-                    <div>
-                        <button onClick={()=>this.changeDisplay()} className="dropbtn">Dropdown</button>
+            <div className='padding-bottom-20 '>
+                <div className="dropdown ">
+                    <div className="buttonDrop">
+                        <button onClick={() => this.changeDisplay()} className="dropbtn"><span className="fontStyle2 pull-left">Add a label</span><span className="pull-right"><FontAwesome
+                            className='fa fa-caret-down'
+                        /></span></button>
                     </div>
-                    <div className={this.state.display?"show":"dropdown-content"}>
+                    <div className={this.state.display ? "show" : "dropdown-content " }>
                         {this.props.data ?
                             <div id="myDropdown" >
                                 <ComponentSelect data={this.props.data} />
@@ -134,7 +135,7 @@ changeDisplay() {
 class Component3 extends React.Component {
     render() {
         return (
-            <div className='padding-bottom-20'>
+            <div className='padding-bottom-20 padding-left-20'>
                 <table >
                     <col width="65%" />
                     <col width="35%" />
@@ -156,13 +157,13 @@ class Component3 extends React.Component {
 class ComponentSelect extends React.Component {
     render() {
         return (
-            <div className="componentSelectSize">
+            <div className="componentSelectSize ">
                 {this.props.data ? <Table multiSelectable={true}>
                     <TableBody >
                         {this.props.data.map((d, i) => (
                             <TableRow style={{ border: 'none' }}>
                                 <TableRowColumn style={{ width: 40 }}><div className="labelColorbox" style={{ backgroundColor: d.color }}></div></TableRowColumn>
-                                <TableRowColumn><h3>{d.name}</h3></TableRowColumn>
+                                <TableRowColumn fontArial><span className="fontStyle2">{d.name}</span></TableRowColumn>
                                 <TableRowColumn style={{ width: 40 }}><Delete /></TableRowColumn>
                             </TableRow>))}
                     </TableBody>
