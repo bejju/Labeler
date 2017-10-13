@@ -1,9 +1,8 @@
 import CoreLayout from '../layouts/CoreLayout';
-import UnAuthLayout from '../layouts/UnAuthLayout';
 import Home from './Home';
 import TeachAndQA from './TeachAndQA';
 
-import { PageNotFound, UnAuthorize } from './PageNotFound';
+import { PageNotFound } from './PageNotFound';
 
 export const createRoutes = (store) => ([
   {
@@ -14,12 +13,6 @@ export const createRoutes = (store) => ([
       TeachAndQA(store)
     ]
   },
-  {
-    path: '/unauthorized',
-    component: CoreLayout,
-    indexRoute: UnAuthorize
-  },
-  
   {
     path: '/metadata',
     indexRoute: Home(store),
