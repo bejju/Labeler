@@ -6,19 +6,6 @@ import Delete from 'material-ui/svg-icons/action/delete';
 import './styles.css';
 import { Table, TableRow, TableRowColumn, TableHeader, TableBody } from 'material-ui/Table';
 
-const names = [
-    'Division Order',
-    'Title opinion',
-    'Correspondence',
-    'Contract',
-    'Royality Clause'
-];
-
-
-const show =
-    {
-        toggle: false
-    }
 
 const styles = {
     block: {
@@ -43,6 +30,7 @@ const styles = {
         color: 'red',
     },
 };
+
 
 export default class Label extends React.Component {
     render() {
@@ -113,14 +101,25 @@ class Component1 extends React.Component {
 }
 
 class Component2 extends React.Component {
+constructor()
+{
+    super();
+    this.state={
+        display:false
+    }
+}
+changeDisplay() {                                  
+   this.setState({display:!this.state.display});
+};
+
     render() {
         return (
             <div className='padding-bottom-20'>
                 <div className="dropdown">
                     <div>
-                        <button  className="dropbtn">Dropdown</button>
+                        <button onClick={()=>this.changeDisplay()} className="dropbtn">Dropdown</button>
                     </div>
-                    <div className="dropdown-content">
+                    <div className={this.state.display?"show":"dropdown-content"}>
                         {this.props.data ?
                             <div id="myDropdown" >
                                 <ComponentSelect data={this.props.data} />
