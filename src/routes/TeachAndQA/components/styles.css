@@ -19,7 +19,9 @@
 .padding-bottom-20{
     padding-bottom: 20px;
 }
-
+.padding-20{
+    padding: 20px;
+}
 
   /*---------------Teach and QA Dashboard ------------------------------ */
    
@@ -157,14 +159,14 @@ padding: 10px;
      position: absolute;
      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
      background-color: whitesmoke;
-     width:50%;
+     width:450px;
      border: 1px solid #b2abab;
      margin-left: 18px;
  }
 
  .dropbtn
  {
-    width:350px;
+    width:450px;
     height:30px;
     background-color: white;
     border: 1px solid #b2abab;
@@ -175,4 +177,23 @@ padding: 10px;
  {
 padding-top: 20px;
     padding-left: 20px;
+ }
+
+ .inputBox
+ {
+    padding-left: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #b2abab;
+    height: 35px;
+    width:250px;
+ }
+
+ .bottonSelectedComponent
+ {
+height:35px;
+border-radius: 5px;
+background-color: #efefef;
+border: 1px solid #b2abab;
+font-size: 18px;
  }

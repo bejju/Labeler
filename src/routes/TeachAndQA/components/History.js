@@ -1,6 +1,7 @@
 import React from 'react'
 import './styles.css';
 var FontAwesome = require('react-fontawesome');
+import { Table, TableRow, TableRowColumn, TableHeader, TableBody } from 'material-ui/Table';
 
 export default class History extends React.Component {
     render() {

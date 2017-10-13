@@ -5,6 +5,7 @@ import Delete from 'material-ui/svg-icons/action/delete';
 import './styles.css';
 import { Table, TableRow, TableRowColumn, TableHeader, TableBody } from 'material-ui/Table';
 var FontAwesome = require('react-fontawesome');
+import Divider from 'material-ui/Divider';
 
 const styles = {
     block: {
@@ -62,7 +63,7 @@ export default class Label extends React.Component {
                 "document_set_id": 2,
                 "name": "Correspondence",
                 "description": "desc",
-                "color": "pink",
+                "color": "#000000",
                 "value": 75,
                 "toggle": false
             },
@@ -87,10 +88,10 @@ class Component1 extends React.Component {
                     <TableBody displayRowCheckbox={false}>
                         {this.props.data.map((d, i) => (
                             <TableRow style={{ border: 'none' }}>
-                                <TableRowColumn style={{ width: 60 }}><div className="labelColorbox" style={{ backgroundColor: d.color }}></div></TableRowColumn>
+                                <TableRowColumn style={{ width: 1}}><div className="labelColorbox" style={{ backgroundColor: d.color }}></div></TableRowColumn>
                                 <TableRowColumn fontArial><span className="fontStyle2">{d.name}</span></TableRowColumn>
                                 <TableRowColumn><LinearProgress mode="determinate" value={d.value} style={{ height: '30' }}></LinearProgress></TableRowColumn>
-                                <TableRowColumn><Toggle defaultToggled={d.toggle} thumbStyle={{ top: 5, left: 4, backgroundColor: "white" }} trackStyle={{ width: 70, height: 23 }} trackSwitchedStyle={{ backgroundColor: "#0ef485" }} /></TableRowColumn>
+                                <TableRowColumn><Toggle  /></TableRowColumn>
                             </TableRow>))}
                     </TableBody>
                 </Table> : null}
@@ -162,24 +163,25 @@ class ComponentSelect extends React.Component {
                     <TableBody >
                         {this.props.data.map((d, i) => (
                             <TableRow style={{ border: 'none' }}>
-                                <TableRowColumn style={{ width: 40 }}><div className="labelColorbox" style={{ backgroundColor: d.color }}></div></TableRowColumn>
+                                <TableRowColumn style={{ width:1 }}><div className="labelColorbox" style={{ backgroundColor: d.color }}></div></TableRowColumn>
                                 <TableRowColumn fontArial><span className="fontStyle2">{d.name}</span></TableRowColumn>
                                 <TableRowColumn style={{ width: 40 }}><Delete /></TableRowColumn>
                             </TableRow>))}
                     </TableBody>
                 </Table> : null}
                 <div style={{ padding: 15 }}>
-                    <input style={{ height: 35, width: '60%' }} type="text"></input>
+                    <input className="inputBox" type="text" placeholder="Create a new label"></input>
                     <span style={
                         {
                             paddingLeft: 20
                         }
-                    }><button style={{ height: 35 }}>Create Label</button>
+                    }>
+                    <button className="bottonSelectedComponent">Create Label</button>
                     </span>
                 </div>
-                <hr />
-                <div className="align-right">
-                    <span style={{ top: 4 }}><button style={{ height: 35 }}>Cancel</button></span>
+                <Divider />
+                <div className="align-right padding-20">
+                    <span style={{ top: 4 }}><button className="bottonSelectedComponent">Cancel</button></span>
                     <span style={{ paddingLeft: 10 }}> <button style={{ height: 35 }} className="button">Add Label</button></span>
                 </div>
             </div >
