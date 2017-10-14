@@ -11,4 +11,4 @@ RUN mv node_modules /app/node_modules/
 
 WORKDIR /app
 ADD . /app
-EXPOSE 3000
+EXPOSE 3010
