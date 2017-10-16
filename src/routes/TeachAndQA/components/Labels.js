@@ -37,40 +37,40 @@ export default class Label extends React.Component {
     render() {
 
         var sampleLabelData = this.props.labels
-        // var sampleLabelData = [
-        //     {
-        //         "document_set_id": 2,
-        //         "name": "Divison Order",
-        //         "description": "desc",
-        //         "color": "yellow",
-        //         "value": 45,
-        //         "toggle": false
-        //     },
-        //     {
-        //         "document_set_id": 2,
-        //         "name": "Title Opinion",
-        //         "description": "desc",
-        //         "color": "blue",
-        //         "value": 65,
-        //         "toggle": false
-        //     },
-        //     {
-        //         "document_set_id": 2,
-        //         "name": "Contract",
-        //         "description": "desc",
-        //         "color": "green",
-        //         "value": 55,
-        //         "toggle": false
-        //     },
-        //     {
-        //         "document_set_id": 2,
-        //         "name": "Correspondence",
-        //         "description": "desc",
-        //         "color": "pink",
-        //         "value": 75,
-        //         "toggle": false
-        //     },
-        // ]
+        var sampleLabelData = [
+            {
+                "document_set_id": 2,
+                "name": "Divison Order",
+                "description": "desc",
+                "color": "f9d6e0",
+                "value": 45,
+                "toggle": false
+            },
+            {
+                "document_set_id": 2,
+                "name": "Title Opinion",
+                "description": "desc",
+                "color": "299107",
+                "value": 65,
+                "toggle": false
+            },
+            {
+                "document_set_id": 2,
+                "name": "Contract",
+                "description": "desc",
+                "color": "1764ea",
+                "value": 55,
+                "toggle": false
+            },
+            {
+                "document_set_id": 2,
+                "name": "Correspondence",
+                "description": "desc",
+                "color": "d8f2fc",
+                "value": 75,
+                "toggle": false
+            },
+        ]
 
 
         return (
@@ -92,10 +92,10 @@ class Component1 extends React.Component {
                     <TableBody displayRowCheckbox={false}>
                         {this.props.data.map((d, i) => (
                             <TableRow style={{ border: 'none' }}>
-                                <TableRowColumn style={{ width: 1 }}><div className="labelColorbox" style={{ backgroundColor: `#${d.color}` }}></div></TableRowColumn>
+                                <TableRowColumn style={{ width: 1}}><div className="labelColorbox" style={{ backgroundColor: `#${d.color}` }}></div></TableRowColumn>
                                 <TableRowColumn ><span className="fontStyle2">{d.name}</span></TableRowColumn>
-                                <TableRowColumn><div className="progressBar"><LinearProgress mode="determinate" value={percentage} style={{ height: '30' }}></LinearProgress><div className="progressPercentage">{d.value + '%'}</div></div></TableRowColumn>
-                                <TableRowColumn><Toggle /></TableRowColumn>
+                                <TableRowColumn><div className="progressBar"><LinearProgress mode="determinate" value={percentage} style={{ height: '30' }}></LinearProgress><div className="progressPercentage">{percentage+'%'}</div></div></TableRowColumn>
+                                <TableRowColumn><Toggle  /></TableRowColumn>
                             </TableRow>))}
                     </TableBody>
                 </Table> : null}
@@ -112,7 +112,7 @@ class Component2 extends React.Component {
         }
         this.changeDisplay = this.changeDisplay.bind(this);
     }
-
+    
     changeDisplay() {
         this.setState({ display: !this.state.display });
     };
@@ -129,8 +129,8 @@ class Component2 extends React.Component {
                     <div className={this.state.display ? "show" : "dropdown-content "}>
                         {this.props.data ?
                             <div id="myDropdown" >
-                                {/*  <ComponentSelect data={this.props.data} changeDisplay={this.changeDisplay}/> */}
-                                <ComponentSelect handleEdit={this.props.handleEdit} data={this.props.data} addLabel={this.props.addLabel} />
+                                {/* <ComponentSelect data={this.props.data} changeDisplay={this.changeDisplay}/> */}
+                                <ComponentSelect handleEdit={this.props.handleEdit} data={this.props.data} addLabel={this.props.addLabel}/>
                             </div> : null
                         }
                     </div>
@@ -190,22 +190,20 @@ class ComponentSelect extends React.Component {
                         }
 
                     }>
-
-                        <button className="bottonSelectedComponent" onClick={(e) => this.props.addLabel(e)}>Create Label</button>
-
+        <button className="bottonSelectedComponent" onClick={(e)=>this.props.addLabel(e)}>Create Label</button>
                     </span>
                 </div>
 
-                <div style={{ paddingLeft: 15, paddingBottom: 15 }} className="fontStyle2">
+                <div style={{ paddingLeft: 15 , paddingBottom: 15}} className="fontStyle2">
                     <textarea className="choosetextarea fontStyle2 " placeholder="Description" rows="4">
                     </textarea>
-
+                   
                 </div>
 
 
                 <Divider />
                 <div className="align-right padding-20">
-                    <span style={{ top: 4 }}><button onClick={() => this.props.changeDisplay()} className="bottonSelectedComponent">Cancel</button></span>
+                    <span style={{ top: 4 }}><button  onClick={() => this.props.changeDisplay()} className="bottonSelectedComponent">Cancel</button></span>
                     <span style={{ paddingLeft: 10 }}> <button style={{ height: 35 }} className="button">Add Label</button></span>
                 </div>
             </div >
