@@ -23,7 +23,7 @@ export default class TeachAndQA extends React.Component {
                 <Divider style={dividerStyle} />
                 <DocumentInfo />
                 <Divider style={dividerStyle} />
-                <Label />
+                <Label labels={this.props.labels} addLabel={this.props.addLabel}  handleEdit={this.props.handleEdit} />
                 <Divider style={dividerStyle} />
                 <Annotation />
                 <Divider style={dividerStyle} />

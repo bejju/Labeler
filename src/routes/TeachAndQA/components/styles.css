@@ -63,33 +63,38 @@
     font-size: 20px;
 }
 
+.labelName
+  {
+      text-align: left;
+      font-size: 30px;
+  }
 
-.labelName {
-    text-align: left;
-    font-size: 30px;
-}
+.status
+  {
+     width: 100%;
+     text-align: "center";
+  }
 
-.status {
-    width: 100%;
-    text-align: "center";
-}
+.page
+  {
+      text-align:right;
+      font-size: 30px;
+  }
 
-.page {
-    text-align: right;
-    font-size: 30px;
-}
+  .annotations
+  {
+    font-size: 20px; 
+  }
 
-.annotations {
-    font-size: 20px;
-}
-
-.history {
+  .history
+  {
     width: 84%;
-    font-size: 20px;
-}
+    font-size: 20px; 
+  }
 
-.annotationsbox {
-    color: rgba(0, 183, 255, 0.705);
+.annotationsbox 
+{
+    color:rgba(0, 183, 255, 0.705);
     border: 2px solid;
     border-color: rgba(255, 238, 0, 0.712);
     padding: 8px;
@@ -239,3 +244,4 @@ position:relative
     color:white;
     font-size: 20px;
 }
+

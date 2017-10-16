@@ -18,6 +18,18 @@ let SetRouteParams = function (routeParams) {
   }
 }
 
+let handleEdit = function(e){
+  return (dispatch, getState) => {
+    dispatch({
+      type: SET_PROP,
+      payload: {
+        key: e.target.name,
+        value: e.target.value
+      }
+    })
+  }
+}
+
 let FetchDocumentSets = function () {
   return (dispatch, getState) => {
     //let url = `${config.api.FETCH_DOCUMENT_SETS}${getState().teachandqa.routeParams.documentSetId}/documents?fields=id&q=${getState().teachandqa.search}`
@@ -41,14 +53,14 @@ let FetchDocumentSets = function () {
 
 let FetchLabels = function () {
   return (dispatch, getState) => {
-    let url = `${config.Rails_api.FETCH_LABELS}`
+    let url = `${config.rails_api.FETCH_LABELS}`
+
     rails_instance.get(url).then((response) => {
       if (response.status === config.HTTP_Status.SUCCESS) {
-        console.log(`response: ${JSON.stringify(response)}`)
         dispatch({
           type: SET_PROP,
           payload: {
-            key: 'data',
+            key: 'labels',
             value: response.data || []
           }
         })
@@ -60,10 +72,23 @@ let FetchLabels = function () {
 }
 
 
-export function addLabel (e) {
+function addLabel (e) {
   return (dispatch, getState) => {
-    let url = `${config.Rails_api.FETCH_LABELS}`
-    rails_instance.post(url).then((response) => {
+    let label = getState().teachandqa.newLabel
+    if(!label){
+      alert(`Label can't be empty`)
+      return
+    }
+    let url = `label?name=${label}`
+    let req = {
+      label :
+      {document_set_id : 1, 
+        name : label, 
+        description: "desc", 
+        color : "123456"
+      }
+    }
+    rails_instance.get(url).then((response) => {
       dispatch({
         type: SET_PROP,
         payload: true
@@ -95,6 +120,8 @@ export default function teachandqaReducer(state = initialState, action) {
 
 export function dispatchToProps() {
   return {
-    SetRouteParams
+    SetRouteParams,
+    addLabel,
+    handleEdit
   }
 }
