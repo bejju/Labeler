@@ -88,10 +88,10 @@ class Component1 extends React.Component {
                     <TableBody displayRowCheckbox={false}>
                         {this.props.data.map((d, i) => (
                             <TableRow style={{ border: 'none' }}>
-                                <TableRowColumn style={{ width: 1}}><div className="labelColorbox" style={{ backgroundColor: d.color }}></div></TableRowColumn>
-                                <TableRowColumn fontArial><span className="fontStyle2">{d.name}</span></TableRowColumn>
-                                <TableRowColumn><LinearProgress mode="determinate" value={d.value} style={{ height: '30' }}></LinearProgress></TableRowColumn>
-                                <TableRowColumn><Toggle  /></TableRowColumn>
+                                <TableRowColumn style={{ width: 1 }}><div className="labelColorbox" style={{ backgroundColor: d.color }}></div></TableRowColumn>
+                                <TableRowColumn ><span className="fontStyle2">{d.name}</span></TableRowColumn>
+                                <TableRowColumn><div className="progressBar"><LinearProgress mode="determinate" value={d.value} style={{ height: '30' }}></LinearProgress><div className="progressPercentage">{d.value+'%'}</div></div></TableRowColumn>
+                                <TableRowColumn><Toggle /></TableRowColumn>
                             </TableRow>))}
                     </TableBody>
                 </Table> : null}
@@ -106,7 +106,9 @@ class Component2 extends React.Component {
         this.state = {
             display: false
         }
+        this.changeDisplay = this.changeDisplay.bind(this);
     }
+    
     changeDisplay() {
         this.setState({ display: !this.state.display });
     };
@@ -120,10 +122,10 @@ class Component2 extends React.Component {
                             className='fa fa-caret-down'
                         /></span></button>
                     </div>
-                    <div className={this.state.display ? "show" : "dropdown-content " }>
+                    <div className={this.state.display ? "show" : "dropdown-content "}>
                         {this.props.data ?
                             <div id="myDropdown" >
-                                <ComponentSelect data={this.props.data} />
+                                <ComponentSelect data={this.props.data} changeDisplay={this.changeDisplay}/>
                             </div> : null
                         }
                     </div>
@@ -138,18 +140,22 @@ class Component3 extends React.Component {
         return (
             <div className='padding-bottom-20 padding-left-20'>
                 <table >
-                    <col width="65%" />
-                    <col width="35%" />
+                    <col width="75%" />
+                    <col width="25%" />
                     <tr>
                         <td>
-                            <textarea className="labeltextarea" rows="4">
-                            </textarea>
+                            <div className="wrapButtonText fontStyle2">
+                                <textarea className="labeltextarea fontStyle2 " placeholder="Remarks" rows="3">
+                                </textarea>
+                                <button className="buttonInsideText">Submit</button>
+                            </div>
                         </td>
                         <td className="align-top">
                             <button className="button button2">Approve</button>
                         </td>
                     </tr>
                 </table>
+
             </div>
         )
     }
@@ -163,9 +169,11 @@ class ComponentSelect extends React.Component {
                     <TableBody >
                         {this.props.data.map((d, i) => (
                             <TableRow style={{ border: 'none' }}>
-                                <TableRowColumn style={{ width:1 }}><div className="labelColorbox" style={{ backgroundColor: d.color }}></div></TableRowColumn>
-                                <TableRowColumn fontArial><span className="fontStyle2">{d.name}</span></TableRowColumn>
-                                <TableRowColumn style={{ width: 40 }}><Delete /></TableRowColumn>
+                                <TableRowColumn style={{ width: 1 }}><div className="labelColorbox" style={{ backgroundColor: d.color }}></div></TableRowColumn>
+                                <TableRowColumn ><span className="fontStyle2">{d.name}</span></TableRowColumn>
+                                <TableRowColumn style={{ width: 40 }}>
+                                    <i className="fa fa-trash-o" style={{ color: '#d84f00', fontSize: 25 }}></i>
+                                </TableRowColumn>
                             </TableRow>))}
                     </TableBody>
                 </Table> : null}
@@ -176,12 +184,20 @@ class ComponentSelect extends React.Component {
                             paddingLeft: 20
                         }
                     }>
-                    <button className="bottonSelectedComponent">Create Label</button>
+                        <button className="bottonSelectedComponent">Create Label</button>
                     </span>
                 </div>
+
+                <div style={{ paddingLeft: 15 , paddingBottom: 15}} className="fontStyle2">
+                    <textarea className="choosetextarea fontStyle2 " placeholder="Description" rows="4">
+                    </textarea>
+                   
+                </div>
+
+
                 <Divider />
                 <div className="align-right padding-20">
-                    <span style={{ top: 4 }}><button className="bottonSelectedComponent">Cancel</button></span>
+                    <span style={{ top: 4 }}><button  onClick={() => this.props.changeDisplay()} className="bottonSelectedComponent">Cancel</button></span>
                     <span style={{ paddingLeft: 10 }}> <button style={{ height: 35 }} className="button">Add Label</button></span>
                 </div>
             </div >

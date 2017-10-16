@@ -1,105 +1,120 @@
-.border-padding-50{
-    padding : 50px;
+.border-padding-50 {
+    padding: 50px;
 }
-.padding-left-50{
+
+.padding-left-50 {
     padding-left: 50px;
 }
-.padding-left-30{
+
+.padding-left-30 {
     padding-left: 30px;
 }
-.padding-left-20{
+
+.padding-left-20 {
     padding-left: 20px;
 }
-.padding-top-30{
+
+.padding-top-30 {
     padding-top: 30px;
 }
-.padding-left-10{
+
+.padding-left-10 {
     padding-left: 10px;
 }
-.padding-right-50{
+
+.padding-right-50 {
     padding-right: 50px;
 }
-.padding-bottom-20{
+
+.padding-bottom-20 {
     padding-bottom: 20px;
 }
-.padding-20{
+
+.padding-20 {
     padding: 20px;
 }
 
-  /*---------------Teach and QA Dashboard ------------------------------ */
-   
-.title{
-    overflow: hidden;
-padding: 10px;
+
+/* TeachAndQA */
+
+.fontArial {
+    font-family: 'Arial Narrow'
 }
 
-.fontArial
-{
-    font-family:  'Arial Narrow'
-}
-
-.fontStyle
-  {
-     font-size: 25px;
-  }
-
-  .fontStyle2
-  {
-     font-size: 20px;
-  }
-
-  .centerTest {
-    text-align:center;
+.pageTitle {
     overflow: hidden;
     padding: 10px;
 }
- 
 
-.labelName
-  {
-      text-align: left;
-      font-size: 30px;
-  }
+.documentInfo {
+    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+}
 
-.status
-  {
-     width: 100%;
-     text-align: "center";
-  }
+.fontStyle {
+    font-size: 25px;
+}
 
-.page
-  {
-      text-align:right;
-      font-size: 30px;
-  }
 
-  .annotations
-  {
-    font-size: 20px; 
-  }
+/*----Labels----- */
 
-  .history
-  {
-      width:84%;
-    font-size: 20px; 
-  }
+.fontStyle2 {
+    font-size: 20px;
+}
 
-.annotationsbox 
-{
-    color:rgba(0, 183, 255, 0.705);
+
+.labelName {
+    text-align: left;
+    font-size: 30px;
+}
+
+.status {
+    width: 100%;
+    text-align: "center";
+}
+
+.page {
+    text-align: right;
+    font-size: 30px;
+}
+
+.annotations {
+    font-size: 20px;
+}
+
+.history {
+    width: 84%;
+    font-size: 20px;
+}
+
+.annotationsbox {
+    color: rgba(0, 183, 255, 0.705);
     border: 2px solid;
     border-color: rgba(255, 238, 0, 0.712);
     padding: 8px;
     font-size: 20px;
-    margin:5px;
-}
-.labeltextarea {
-    width:100%;
+    margin: 5px;
 }
 
-.button
- {
-    background-color:  rgb(0, 195, 255);
+.labeltextarea {
+    width: 100%;
+    padding: 5px;
+}
+
+.choosetextarea
+{
+    padding-left: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #b2abab;
+    height: 40px;
+    width: 250px;
+    padding: 5px;
+}
+
+.button {
+    background-color: rgb(0, 195, 255);
     border: none;
     border-radius: 6px;
     color: white;
@@ -110,101 +125,117 @@ padding: 10px;
     cursor: pointer;
 }
 
-.align-top
-{
+.align-top {
     padding-left: 50px;
     vertical-align: top;
 }
 
-.align-right
-{
-   float: right;
+.align-right {
+    float: right;
 }
 
-
-.historyApproveStatus
-{
+.historyApproveStatus {
     padding: 20px;
 }
 
-.historyApprove
-{
-    color:green;
-    font-weight: bold;
-}
-.historyUnApprove
-{
-    color:red;
+.historyApprove {
+    color: green;
     font-weight: bold;
 }
 
-.labelColorbox
-{
-    width:15px;
+.historyUnApprove {
+    color: red;
+    font-weight: bold;
+}
+
+.labelColorbox {
+    width: 15px;
     height: 15px;
-    background-color:orange;
+    background-color: orange;
 }
 
 
- /*---------------Teach and QA Dashboard  select button css------------------------------ */
+/*--------------- select button css------------------------------ */
 
- .dropdown-content
- {
-    display:none;
+.dropdown-content {
+    display: none;
     position: absolute;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     background-color: whitesmoke;
-    width:50%;
-    border:  black;
- }
+    width: 50%;
+    border: black;
+}
 
- .show{
-     display:inline-block;
-     position: absolute;
-     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-     background-color: whitesmoke;
-     width:450px;
-     border: 1px solid #b2abab;
-     margin-left: 18px;
- }
-
- .dropbtn
- {
-    width:450px;
-    height:30px;
-    background-color: white;
+.show {
+    display: inline-block;
+    position:absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: whitesmoke;
+    width: 450px;
     border: 1px solid #b2abab;
-    border-radius: 5px;
+    margin-left: 18px;
+    z-index: 999;
+}
 
- }
- .buttonDrop
- {
-padding-top: 20px;
-    padding-left: 20px;
- }
-
- .inputBox
- {
+.inputBox {
     padding-left: 10px;
     font-size: 18px;
     border-radius: 5px;
     border: 1px solid #b2abab;
     height: 35px;
-    width:250px;
- }
+    width: 250px;
+}
 
- .bottonSelectedComponent
- {
-height:35px;
-border-radius: 5px;
-background-color: #efefef;
-border: 1px solid #b2abab;
-font-size: 18px;
- }
+.bottonSelectedComponent {
+    height: 35px;
+    border-radius: 5px;
+    background-color: #efefef;
+    border: 1px solid #b2abab;
+    font-size: 18px;
+}
 
- .plusSymbol
- {
+.plusSymbol {
+    color: #00C3FF;
+    padding-right: 10px;
+}
 
-     color:#00C3FF;
-     padding-right: 10px;
- }
+.dropbtn {
+    width: 450px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #b2abab;
+    border-radius: 5px;
+}
+
+.buttonDrop {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.wrapButtonText {
+    position: relative;
+}
+
+.buttonInsideText {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border:none;
+    background-color: white;
+    color:#00C3FF;
+}
+
+/* progressbar */
+.progressBar
+{
+position:relative
+}
+
+.progressPercentage
+{
+    position: absolute;
+    left: 20px;
+    top:5px;
+    color:white;
+    font-size: 20px;
+}

@@ -7,7 +7,8 @@ import Annotation from './Annotations';
 import Label from './Labels';
 
 const dividerStyle = {
-    backgroundColor: '#49E9FF'
+    backgroundColor: '#d8f2fc',
+    height:'2px'
 };
 
 export default class TeachAndQA extends React.Component {
@@ -35,7 +36,7 @@ export default class TeachAndQA extends React.Component {
 class PageTitle extends React.Component {
     render() {
         return (
-            <div className="title">
+            <div className="pageTitle">
                 <span className="pull-left fontStyle">Special Provisions</span>
                 <span className="pull-right fontStyle">Teach & QA</span>
             </div>
@@ -46,7 +47,7 @@ class PageTitle extends React.Component {
 class DocumentInfo extends React.Component {
     render() {
         return (
-            <div className="centerTest" >
+            <div className="documentInfo" >
                 <span className="pull-left fontStyle">MMS10-10-66-66.pdf</span>
                 <span className="fontStyle status">LABELED</span>
                 <span className="pull-right fontStyle"><Pagination /></span>
