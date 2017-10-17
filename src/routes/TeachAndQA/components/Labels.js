@@ -150,7 +150,7 @@ class Component3 extends React.Component {
                 <Table selectable={false}>
                     <TableBody displayRowCheckbox={false}>
                         <TableRow style={{ border: 'none' }}>
-                            <TableRowColumn style={{width:'75%'}}><div className="wrapButtonText fontStyle4 fontArial">
+                            <TableRowColumn style={{width:'85%'}}><div className="wrapButtonText fontStyle4 fontArial">
                                 <textarea className="labeltextarea padding-left-10 fontStyle4 fontArial" placeholder="Remarks" rows="3">
                                 </textarea>
                                 <button className="buttonInsideText fontArial">Submit</button>
