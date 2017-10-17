@@ -8,7 +8,7 @@
 }
 
 .fontStyle2 {
-    font-size: 17px;
+    font-size: 18px;
     color: #75797F;
 }
 
@@ -16,13 +16,12 @@
     font-size: 16px;
     color: #B5B6B9;
     font-weight: bold;
-    display: inline-block;
 }
+
 .fontStyle3approve {
     font-size: 16px;
     color: #89C18F;
     font-weight: bold;
-    display: inline-block;
 }
 
 .fontStyle4 {
@@ -36,12 +35,16 @@
 }
 
 .fontStyle6 {
-    font-size:14px;
+    font-size: 14px;
     color: #75797F;
 }
 
 .padding-10 {
     padding: 10px;
+}
+
+.padding-15 {
+    padding: 15px;
 }
 
 .padding-20 {
@@ -71,6 +74,11 @@
 .padding-right-10 {
     padding-right: 10px;
 }
+
+.padding-right-20 {
+    padding-right: 20px;
+}
+
 .padding-right-30 {
     padding-right: 30px;
 }
@@ -98,6 +106,7 @@
 .padding-bottom-15 {
     padding-bottom: 15px;
 }
+
 .padding-bottom-20 {
     padding-bottom: 20px;
 }
@@ -110,7 +119,7 @@
     width: 15px;
     height: 15px;
     background-color: orange;
-    display:inline-block;
+    display: inline-block;
 }
 
 
@@ -123,6 +132,43 @@
 .documentInfo {
     text-align: center;
     overflow: hidden;
+}
+
+.filename {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.filestatus {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.pagenumber {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.pagination {
+    display: inline-block
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #97CEF9;
+    cursor: pointer;
+}
+
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #97CEF9;
+    cursor: pointer;
 }
 
 
@@ -210,11 +256,12 @@
     font-size: 16px;
     cursor: pointer;
 }
+
 .unapprove-button {
-    background-color:white;
+    background-color: white;
     border: 1px solid #EDA59A;
     border-radius: 5px;
-    color:#EDA59A;
+    color: #EDA59A;
     padding: 6px 16px;
     text-align: center;
     display: inline-block;
@@ -260,11 +307,12 @@
     color: rgb(151, 201, 249);
     border: 2px solid;
     border-color: rgba(255, 238, 0, 0.712);
-    width:95%;
-    height:95%;
+    width: 95%;
+    height: 95%;
     padding: 10px;
     overflow: hidden;
 }
+
 .plusSymbol {
     color: #00C3FF;
 }

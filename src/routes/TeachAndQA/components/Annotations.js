@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles.css';
-var FontAwesome = require('react-fontawesome');
+import FontAwesome from 'react-fontawesome';
 import { Table, TableRow, TableRowColumn, TableHeader, TableBody } from 'material-ui/Table';
 
 var colors = [

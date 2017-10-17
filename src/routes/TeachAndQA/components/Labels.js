@@ -4,7 +4,7 @@ import PersonAdd from 'material-ui/svg-icons/social/person-add';
 import Delete from 'material-ui/svg-icons/action/delete';
 import './styles.css';
 import { Table, TableRow, TableRowColumn, TableHeader, TableBody } from 'material-ui/Table';
-var FontAwesome = require('react-fontawesome');
+import FontAwesome from 'react-fontawesome';
 import Divider from 'material-ui/Divider';
 
 const styles = {
