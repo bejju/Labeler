@@ -33,7 +33,7 @@ export default class TeachAndQA extends React.Component {
                 },
                 {
                     "document_name": "AAF10-40-50-60.pdf",
-                    "document_status": "UNLABELED",
+                    "document_status": "UNAPPROVED",
                 }
             ]
         }
