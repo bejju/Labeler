@@ -18,15 +18,13 @@ export default class Annotation extends React.Component {
                 <div className="fontStyle4 ">ANNOTATIONS</div>
                 <div className="padding-left-30 padding-top-15  fontArial">
                     <div className=" fontStyle6">No supporting annotations</div>
-
-
                     <Table selectable={false}>
                         <TableBody displayRowCheckbox={false}>
                             <TableRow style={{ border: 'none' }}>
                                 <TableRowColumn style={{ width: '27%' }}><div className="labelColorbox" style={{ backgroundColor: `#${colors[Math.floor((Math.random() * 20))]}` }} ></div><span className="fontStyle2 padding-left-20">Title Opinion</span></TableRowColumn>
                                 <TableRowColumn style={{ width: '30%' }}><div className="fontStyle5 annotationsbox">Based solely upon our examination</div></TableRowColumn>
                                 <TableRowColumn style={{ width: '30%' }}><span className="fontStyle2">This paragraph consists of information about label</span></TableRowColumn>
-                                <TableRowColumn style={{width:'10%'}}><i className="fa fa-file-text-o" style={{ fontSize: 15 }}></i></TableRowColumn>
+                                <TableRowColumn style={{ width: '10%' }}><i className="fa fa-file-text-o" style={{ fontSize: 15 }}></i></TableRowColumn>
                             </TableRow>
 
                             <TableRow style={{ border: 'none' }}>
