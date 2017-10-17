@@ -18,7 +18,7 @@ export default class TeachAndQA extends React.Component {
     }
     render() {
         return (
-            <div className='border-padding-50 fontArial'>
+            <div className='padding-20 fontArial'>
                 <PageTitle />
                 <Divider style={dividerStyle} />
                 <DocumentInfo />
@@ -36,8 +36,8 @@ export default class TeachAndQA extends React.Component {
 class PageTitle extends React.Component {
     render() {
         return (
-            <div className="pageTitle">
-                <span className="pull-left fontStyle">Special Provisions</span>
+            <div className="pageTitle padding-10 fontArial">
+                <span className="pull-left fontStyle ">Special Provisions</span>
                 <span className="pull-right fontStyle">Teach & QA</span>
             </div>
         )
@@ -47,10 +47,10 @@ class PageTitle extends React.Component {
 class DocumentInfo extends React.Component {
     render() {
         return (
-            <div className="documentInfo" >
-                <span className="pull-left fontStyle">MMS10-10-66-66.pdf</span>
-                <span className="fontStyle status">LABELED</span>
-                <span className="pull-right fontStyle"><Pagination /></span>
+            <div className="documentInfo padding-10" >
+                <span className="pull-left fontStyle2">MMS10-10-66-66.pdf</span>
+                <div className="fontStyle3approve">APPROVED</div>
+                <span className="pull-right fontStyle2"> </span>
             </div>
         )
     }
