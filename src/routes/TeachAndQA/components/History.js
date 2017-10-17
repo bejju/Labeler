@@ -13,24 +13,24 @@ export default class History extends React.Component {
                     <Table selectable={false} className="history">
                         <TableBody displayRowCheckbox={false}>
                             <TableRow style={{ border: 'none' }}>
-                                <TableRowColumn style={{width:'25%'}} ><span className="fontStyle2">11/27/17  8:30am</span></TableRowColumn>
+                                <TableRowColumn style={{width:'27%'}} ><span className="fontStyle2">11/27/17  8:30am</span></TableRowColumn>
                                 <TableRowColumn  style={{width:'20%'}}><span className="fontStyle2"><div >Labeled</div></span></TableRowColumn>
-                                <TableRowColumn  style={{width:'20%'}}><span className="fontStyle2">Machine</span></TableRowColumn>
+                                <TableRowColumn  style={{width:'18%'}}><span className="fontStyle2">Machine</span></TableRowColumn>
                                 <TableRowColumn style={{ width: '25%' }}  ><span className="fontStyle2"></span></TableRowColumn>
                                 <TableRowColumn  ></TableRowColumn>
                             </TableRow>
                             <TableRow style={{ border: 'none' }}>
-                                <TableRowColumn style={{width:'25%'}}  ><span className="fontStyle2">11/27/17  8:30am</span></TableRowColumn>
-                                <TableRowColumn style={{width:'20%'}}><span className="fontStyle2"><div className="unApprove">Unapproved</div></span></TableRowColumn>
-                                <TableRowColumn style={{width:'20%'}} ><span className="fontStyle2">Beth</span></TableRowColumn>
+                                <TableRowColumn style={{width:'27%'}}   ><span className="fontStyle2">11/27/17  8:30am</span></TableRowColumn>
+                                <TableRowColumn  style={{width:'20%'}}><span className="fontStyle2"><div className="unApprove">Unapproved</div></span></TableRowColumn>
+                                <TableRowColumn  style={{width:'18%'}} ><span className="fontStyle2">Beth</span></TableRowColumn>
                                 <TableRowColumn style={{ width: '25%' }}  ><span className="fontStyle2">Designations invalid be somemore text comes here</span></TableRowColumn>
-                                <TableRowColumn > <i className="fa fa-file-text-o" style={{ fontSize: 15 }}></i></TableRowColumn>
+                                <TableRowColumn style={{ width: '5%' }}> <i className="fa fa-file-text-o" style={{ fontSize: 15 }}></i></TableRowColumn>
                             </TableRow>
                             <TableRow style={{ border: 'none' }}>
                                 <TableRowColumn ><span className="fontStyle2">11/27/17  8:30am</span></TableRowColumn>
                                 <TableRowColumn ><span className="fontStyle2"><div className="approve">Approved</div></span></TableRowColumn>
-                                <TableRowColumn style={{width:'20%'}} ><span className="fontStyle2">John</span></TableRowColumn>
-                                <TableRowColumn style={{ width: '25%' }}  ><span className="fontStyle2">First cut,tentatively app something else text comes her</span></TableRowColumn>
+                                <TableRowColumn ><span className="fontStyle2">John</span></TableRowColumn>
+                                <TableRowColumn  ><span className="fontStyle2">First cut,tentatively app something else text comes her</span></TableRowColumn>
                                 <TableRowColumn ><i className="fa fa-file-text-o" style={{ fontSize: 15 }}></i></TableRowColumn>
                             </TableRow>
                         </TableBody>

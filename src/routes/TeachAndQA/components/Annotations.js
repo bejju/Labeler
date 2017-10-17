@@ -23,14 +23,14 @@ export default class Annotation extends React.Component {
                     <Table selectable={false}>
                         <TableBody displayRowCheckbox={false}>
                             <TableRow style={{ border: 'none' }}>
-                                <TableRowColumn style={{ width: '25%' }}><div className="labelColorbox" style={{ backgroundColor: `#${colors[Math.floor((Math.random() * 20))]}` }} ></div><span className="fontStyle2 padding-left-20">Title Opinion</span></TableRowColumn>
-                                <TableRowColumn style={{ width: '35%' }}><div className="fontStyle5 annotationsbox">Based solely upon our examination</div></TableRowColumn>
+                                <TableRowColumn style={{ width: '27%' }}><div className="labelColorbox" style={{ backgroundColor: `#${colors[Math.floor((Math.random() * 20))]}` }} ></div><span className="fontStyle2 padding-left-20">Title Opinion</span></TableRowColumn>
+                                <TableRowColumn style={{ width: '30%' }}><div className="fontStyle5 annotationsbox">Based solely upon our examination</div></TableRowColumn>
                                 <TableRowColumn style={{ width: '30%' }}><span className="fontStyle2">This paragraph consists of information about label</span></TableRowColumn>
-                                <TableRowColumn ><i className="fa fa-file-text-o" style={{ fontSize: 15 }}></i></TableRowColumn>
+                                <TableRowColumn style={{width:'10%'}}><i className="fa fa-file-text-o" style={{ fontSize: 15 }}></i></TableRowColumn>
                             </TableRow>
 
                             <TableRow style={{ border: 'none' }}>
-                                <TableRowColumn style={{ width: '30%' }}><div className="labelColorbox" style={{ backgroundColor: `#${colors[Math.floor((Math.random() * 20))]}` }} ></div><span className="fontStyle2 padding-left-20">Title Opinion</span></TableRowColumn>
+                                <TableRowColumn style={{ width: '27%' }}><div className="labelColorbox" style={{ backgroundColor: `#${colors[Math.floor((Math.random() * 20))]}` }} ></div><span className="fontStyle2 padding-left-20">Title Opinion</span></TableRowColumn>
                                 <TableRowColumn  ><div className="fontStyle5 annotationsbox">Tract ownership tract no. 47:the software</div></TableRowColumn>
                                 <TableRowColumn><span className="fontStyle2">key clause appears as ownership of  some text</span></TableRowColumn>
                                 <TableRowColumn ><i className="fa fa-file-text-o" style={{ fontSize: 15 }}></i>

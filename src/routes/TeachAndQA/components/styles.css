@@ -135,12 +135,12 @@
 }
 
 .filename {
-    vertical-align: top;
+    vertical-align: middle;
     display: inline-block;
 }
 
 .filestatus {
-    vertical-align: top;
+    vertical-align: middle;
     display: inline-block;
 }
 
