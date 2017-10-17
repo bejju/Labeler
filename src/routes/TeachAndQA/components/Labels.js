@@ -74,7 +74,7 @@ export default class Label extends React.Component {
 
 
         return (
-            <div className='padding-left-20 padding-top-30 padding-right-50  fontArial'>
+            <div className='padding-left-20 padding-top-20 padding-right-50  fontArial'>
                 <span className="fontStyle4 ">LABELS</span>
                 <div className="padding-left-30">
                     <Component1 data={sampleLabelData} />
@@ -94,8 +94,8 @@ class Component1 extends React.Component {
                     <TableBody displayRowCheckbox={false}>
                         {this.props.data.map((d, i) => (
                             <TableRow style={{ border: 'none' }}>
-                                <TableRowColumn ><div className="labelColorbox" style={{ backgroundColor: `#${d.color}` }}></div><span className="fontStyle2 padding-left-20">{d.name}</span></TableRowColumn>
-                                <TableRowColumn ><div className="progressBar"><LinearProgress mode="determinate" color={'#97CEF9'} value={percentage} style={{
+                                <TableRowColumn style={{width:'35%'}}><div className="labelColorbox" style={{ backgroundColor: `#${d.color}` }}></div><span className="fontStyle2 padding-left-20">{d.name}</span></TableRowColumn>
+                                <TableRowColumn style={{width:'50%'}}><div className="progressBar"><LinearProgress mode="determinate" color={'#97CEF9'} value={percentage} style={{
                                     height: '30', borderColor: '#69B1FA', backgroundColor: 'white', borderStyle: 'solid', borderWidth: '2px', borderRadius: '4px',width:'100%'
                                 }}></LinearProgress><div className="progressPercentage padding-left-20">{percentage + '%'}</div></div></TableRowColumn>
                                 <TableRowColumn  ><Toggle /></TableRowColumn>
@@ -150,12 +150,12 @@ class Component3 extends React.Component {
                 <Table selectable={false}>
                     <TableBody displayRowCheckbox={false}>
                         <TableRow style={{ border: 'none' }}>
-                            <TableRowColumn style={{width:'60%'}}><div className="wrapButtonText fontStyle4 fontArial">
+                            <TableRowColumn style={{width:'75%'}}><div className="wrapButtonText fontStyle4 fontArial">
                                 <textarea className="labeltextarea padding-left-10 fontStyle4 fontArial" placeholder="Remarks" rows="3">
                                 </textarea>
                                 <button className="buttonInsideText fontArial">Submit</button>
                             </div> </TableRowColumn>
-                            <TableRowColumn style={{width:'30%'}} className="align-top padding-left-50"><button className="unapprove-button">Approve</button> </TableRowColumn>
+                            <TableRowColumn style={{width:'16%'}} className="align-top "><button className="unapprove-button">Approve</button> </TableRowColumn>
                         </TableRow>
                     </TableBody>
                </Table>
@@ -172,9 +172,9 @@ class ComponentSelect extends React.Component {
                     <TableBody >
                         {this.props.data.map((d, i) => (
                             <TableRow style={{ border: 'none' }}>
-                                <TableRowColumn style={{ width: 1 }}><div className="labelColorbox" style={{ backgroundColor: `#${d.color}` }}></div></TableRowColumn>
-                                <TableRowColumn ><span className="fontStyle2">{d.name}</span></TableRowColumn>
-                                <TableRowColumn style={{ width: 40 }}>
+                                <TableRowColumn style={{ width: '15px' }}><div className="labelColorbox" style={{ backgroundColor: `#${d.color}` }}></div></TableRowColumn>
+                                <TableRowColumn style={{ width: '35%' }}><span className="fontStyle2">{d.name}</span></TableRowColumn>
+                                <TableRowColumn style={{ width: '20%' }}>
                                     <i className="fa fa-trash-o" style={{ color: '#d84f00', fontSize: 20 }}></i>
                                 </TableRowColumn>
                             </TableRow>))}
@@ -196,9 +196,9 @@ class ComponentSelect extends React.Component {
 
 
                 <Divider />
-                <div className="pull-right padding-20">
+                <div className="pull-right padding-20 ">
                     <span style={{ top: 4 }}><button onClick={() => this.props.changeDisplay()} className="bottonSelectedComponent">Cancel</button></span>
-                    <span style={{ paddingLeft: 10 }}> <button style={{ height: 35 }} className="approve-button">Add Label</button></span>
+                    <span style={{ paddingLeft: 10  }}> <button style={{ height: 35 }} className="approve-button">Add Label</button></span>
                 </div>
             </div >
         );

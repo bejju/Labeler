@@ -18,7 +18,7 @@ export default class TeachAndQA extends React.Component {
     }
     render() {
         return (
-            <div className='padding-20 fontArial'>
+            <div className='padding-10 fontArial'>
                 <PageTitle />
                 <Divider style={dividerStyle} />
                 <DocumentInfo />

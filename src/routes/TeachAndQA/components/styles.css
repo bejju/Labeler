@@ -71,6 +71,13 @@
 .padding-right-10 {
     padding-right: 10px;
 }
+.padding-right-30 {
+    padding-right: 30px;
+}
+
+.padding-right-40 {
+    padding-right: 40px;
+}
 
 .padding-right-50 {
     padding-right: 50px;
@@ -221,7 +228,7 @@
     border-radius: 5px;
     border: 1px solid #b2abab;
     height: 35px;
-    width: 250px;
+    width: 280px;
 }
 
 .bottonSelectedComponent {
@@ -238,7 +245,7 @@
     border-radius: 5px;
     border: 1px solid #b2abab;
     height: 40px;
-    width: 250px;
+    width: 280px;
     padding-bottom: 5px;
 }
 
