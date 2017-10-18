@@ -1,15 +1,15 @@
 .fontArial {
-    font-family: 'Arial Narrow'
+    font-family:  Helvetica;
 }
 
 .fontStyle {
     font-size: 27px;
-    color: #97999D;
+    color: #75797F;
 }
 
 .fontStyle2 {
     font-size: 18px;
-    color: #75797F;
+    color: #53585F;
 }
 
 .fontStyle3 {
@@ -26,7 +26,7 @@
 
 .fontStyle4 {
     font-size: 18px;
-    color: #75797F;
+    color: #53535F;
 }
 
 .fontStyle5 {
@@ -36,7 +36,7 @@
 
 .fontStyle6 {
     font-size: 14px;
-    color: #75797F;
+    color: #53535F;
 }
 
 .padding-10 {
