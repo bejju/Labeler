@@ -14,7 +14,7 @@ services:
       - ./src:/app/src
       - dist:/app/dist
     restart: unless-stopped
-    command: npm run build && npm run start
+    command: bash -c "npm run build && npm run start"
 
   # labelstatic:
   #   image: httpd:latest
