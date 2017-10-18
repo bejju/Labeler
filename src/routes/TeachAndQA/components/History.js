@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles.css';
+import './styles.scss';
 import FontAwesome from 'react-fontawesome';
 import { Table, TableRow, TableRowColumn, TableHeader, TableBody } from 'material-ui/Table';
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import Divider from 'material-ui/Divider';
 import Pagination from 'material-ui-pagination';
-import './styles.css';
+import './styles.scss';
 import History from './History';
 import Annotation from './Annotations';
 import Label from './Labels';
@@ -52,7 +52,7 @@ export default class TeachAndQA extends React.Component {
     render() {
 
         return (
-            <div className='padding-10 fontHelvetica'>
+            <div id='labeler'>
                 <PageTitle />
                 <Divider style={dividerStyle} />
                 <DocumentInfo data={this.state.samplePaginationData} index={this.state.paginationIndex} incrementIndex={this.incrementIndex} decrementIndex={this.decrementIndex} />

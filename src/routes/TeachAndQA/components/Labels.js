@@ -1,6 +1,6 @@
 import React from 'react'
 import { Toggle, RaisedButton, SelectField, MenuItem, TextField, LinearProgress } from 'material-ui'
-import './styles.css';
+import './styles.scss';
 import Divider from 'material-ui/Divider';
 import { Table, TableRow, TableRowColumn, TableHeader, TableBody } from 'material-ui/Table';
 import FontAwesome from 'react-fontawesome';
@@ -9,43 +9,7 @@ const percentage = 75
 
 export default class Label extends React.Component {
     render() {
-
-        // var sampleLabelData = this.props.labels
-        var sampleLabelData = [
-            {
-                "document_set_id": 2,
-                "name": "Divison Order",
-                "description": "desc",
-                "color": "800080",
-                "value": 45,
-                "toggle": false
-            },
-            {
-                "document_set_id": 2,
-                "name": "Title Opinion",
-                "description": "desc",
-                "color": "299107",
-                "value": 65,
-                "toggle": false
-            },
-            {
-                "document_set_id": 2,
-                "name": "Contract",
-                "description": "desc",
-                "color": "008080",
-                "value": 55,
-                "toggle": false
-            },
-            {
-                "document_set_id": 2,
-                "name": "Correspondence",
-                "description": "desc",
-                "color": "0000FF",
-                "value": 75,
-                "toggle": false
-            },
-        ]
-
+        var sampleLabelData = this.props.labels
         return (
             <div className='padding-left-20 padding-top-20 padding-right-50 fontHelvetica'>
                 <span className="content-heading ">LABELS</span>
@@ -62,7 +26,7 @@ export default class Label extends React.Component {
 class LabelData extends React.Component {
     render() {
         return (
-            <div id="label-data"className="padding-top-15 fontHelvetica">
+            <div id="label-data" className="padding-top-15 fontHelvetica">
                 {this.props.data ? <Table selectable={false}>
                     <TableBody displayRowCheckbox={false}>
                         {this.props.data.map((d, i) => (

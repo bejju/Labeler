@@ -1,7 +1,7 @@
 import React from 'react'
 import FontAwesome from 'react-fontawesome';
 import { Table, TableRow, TableRowColumn, TableHeader, TableBody } from 'material-ui/Table';
-import './styles.css';
+import './styles.scss';
 
 var colors = [
     'C0C0C0', '808080', '000000', 'FF0000', '800000',
