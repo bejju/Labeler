@@ -94,11 +94,17 @@ class Component1 extends React.Component {
                     <TableBody displayRowCheckbox={false}>
                         {this.props.data.map((d, i) => (
                             <TableRow style={{ border: 'none' }}>
-                                <TableRowColumn style={{width:'35%'}}><div className="labelColorbox" style={{ backgroundColor: `#${d.color}` }}></div><span className="fontStyle2 padding-left-20">{d.name}</span></TableRowColumn>
-                                <TableRowColumn style={{width:'45%'}}><div className="progressBar"><LinearProgress mode="determinate" color={'#97CEF9'} value={percentage} style={{
-                                    height: '30', borderColor: '#69B1FA', backgroundColor: 'white', borderStyle: 'solid', borderWidth: '2px', borderRadius: '4px',width:'100%'
+                                <TableRowColumn style={{ width: '35%' }}><div className="labelColorbox" style={{ backgroundColor: `#${d.color}` }}></div><span className="fontStyle2 padding-left-20">{d.name}</span></TableRowColumn>
+                                <TableRowColumn style={{ width: '45%' }}><div className="progressBar"><LinearProgress mode="determinate" color={'#97CEF9'} value={percentage} style={{
+                                    height: '30', borderColor: '#69B1FA', backgroundColor: 'white', borderStyle: 'solid', borderWidth: '2px', borderRadius: '4px', width: '100%'
                                 }}></LinearProgress><div className="progressPercentage padding-left-20">{percentage + '%'}</div></div></TableRowColumn>
-                                <TableRowColumn  ><Toggle /></TableRowColumn>
+                                {/* <TableRowColumn  ><Toggle thumbStyle={{ top: '7px', left: '4px' }} trackStyle={{ backgroundColor: '#DCDEE0', width: '80px', height: '25px', border: '1px solid #BABAC0' }} trackSwitchedStyle={{ backgroundColor: '#96EA9C', width: '80px', height: '25px', border: '1px solid #70BF41' }} thumbSwitchedStyle={{ backgroundColor: 'white', top: '7px',transformOrigin({{'50px'}}) }} /></TableRowColumn> */}
+                                <TableRowColumn>
+                                    <label className="switch">
+                                        <input type="checkbox" id="btnstatus"></input>
+                                        <span className="slider round"></span>
+                                    </label>
+                                </TableRowColumn>
                             </TableRow>))}
                     </TableBody>
                 </Table> : null}
@@ -150,15 +156,15 @@ class Component3 extends React.Component {
                 <Table selectable={false}>
                     <TableBody displayRowCheckbox={false}>
                         <TableRow style={{ border: 'none' }}>
-                            <TableRowColumn style={{width:'77%'}}><div className="wrapButtonText fontStyle4 fontArial">
+                            <TableRowColumn style={{ width: '77%' }}><div className="wrapButtonText fontStyle4 fontArial">
                                 <textarea className="labeltextarea padding-left-10 fontStyle4 fontArial" placeholder="Remarks" rows="3">
                                 </textarea>
                                 <button className="buttonInsideText fontArial">Submit</button>
                             </div> </TableRowColumn>
-                            <TableRowColumn style={{width:'20%'}} className="align-top "><button className="unapprove-button">Approve</button> </TableRowColumn>
+                            <TableRowColumn style={{ width: '20%' }} className="align-top "><button className="unapprove-button">Approve</button> </TableRowColumn>
                         </TableRow>
                     </TableBody>
-               </Table>
+                </Table>
             </div>
         )
     }
@@ -198,7 +204,7 @@ class ComponentSelect extends React.Component {
                 <Divider />
                 <div className="pull-right padding-20 ">
                     <span style={{ top: 4 }}><button onClick={() => this.props.changeDisplay()} className="bottonSelectedComponent">Cancel</button></span>
-                    <span style={{ paddingLeft: 10  }}> <button style={{ height: 35 }} className="approve-button">Add Label</button></span>
+                    <span style={{ paddingLeft: 10 }}> <button style={{ height: 35 }} className="approve-button">Add Label</button></span>
                 </div>
             </div >
         );

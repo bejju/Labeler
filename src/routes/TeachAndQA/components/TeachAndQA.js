@@ -8,7 +8,7 @@ import Label from './Labels';
 import FontAwesome from 'react-fontawesome';
 
 const dividerStyle = {
-    backgroundColor: '#d8f2fc',
+    backgroundColor: '#C3EBFA',
     height: '2px'
 };
 
