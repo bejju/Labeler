@@ -1,40 +1,25 @@
-.fontArial {
-    font-family:  Helvetica;
+.fontHelvetica {
+    font-family: Helvetica;
 }
 
-.fontStyle {
-    font-size: 27px;
-    color: #75797F;
-}
-
-.fontStyle2 {
+.page-font {
     font-size: 18px;
     color: #53585F;
 }
 
-.fontStyle3 {
-    font-size: 16px;
-    color: #B5B6B9;
-    font-weight: bold;
-}
-
-.fontStyle3approve {
-    font-size: 16px;
-    color: #89C18F;
-    font-weight: bold;
-}
-
-.fontStyle4 {
+.content-heading {
     font-size: 18px;
     color: #53535F;
 }
 
-.fontStyle5 {
-    font-size: 16px;
-    color: rgba(0, 183, 255, 0.705);
+.label-colorbox {
+    width: 15px;
+    height: 15px;
+    background-color: orange;
+    display: inline-block;
 }
 
-.fontStyle6 {
+.no-content {
     font-size: 14px;
     color: #53535F;
 }
@@ -115,45 +100,53 @@
     padding-bottom: 30px;
 }
 
-.labelColorbox {
-    width: 15px;
-    height: 15px;
-    background-color: orange;
-    display: inline-block;
-}
-
 
 /* TeachAndQA */
 
-.pageTitle {
+#page-title {
     overflow: hidden;
 }
 
-.documentInfo {
+#page-title .title-font {
+    font-size: 27px;
+    color: #75797F;
+}
+
+#document-info {
     text-align: center;
     overflow: hidden;
 }
 
-.filename {
+#document-info .file-name {
     vertical-align: middle;
     display: inline-block;
 }
 
-.filestatus {
+#document-info .file-status {
     vertical-align: middle;
     display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-.pagenumber {
+#document-info .document-unapproved {
+    color: #B5B6B9;
+}
+
+#document-info .document-approved {
+    color: #89C18F;
+}
+
+#document-info .pagenumber {
     vertical-align: top;
     display: inline-block;
 }
 
-.pagination {
+#document-info .pagination {
     display: inline-block
 }
 
-.arrow-right {
+#document-info .arrow-right {
     width: 0;
     height: 0;
     border-top: 10px solid transparent;
@@ -162,7 +155,7 @@
     cursor: pointer;
 }
 
-.arrow-left {
+#document-info .arrow-left {
     width: 0;
     height: 0;
     border-top: 10px solid transparent;
@@ -174,22 +167,88 @@
 
 /*----Labels----- */
 
-.progressBar {
+#label-data .progress-bar {
     position: relative
 }
 
-.progressPercentage {
+#label-data .progress-percentage {
     position: absolute;
     top: 5px;
     color: white;
     font-size: 18px;
 }
 
-.toggle {
-    text-align: center;
+
+/* The switch - the box around the slider */
+
+#label-data .switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 25px;
 }
 
-.dropbtn {
+
+/* Hide default HTML checkbox */
+
+#label-data .switch input {
+    display: none;
+}
+
+
+/* The slider */
+
+#label-data .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #DCDEE0;
+    border: 1px solid #BABAC0;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+#label-data .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+#label-data input:checked+.slider {
+    background-color: #96EA9C;
+    border: 1px solid #70BF41;
+}
+
+#label-data input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+#label-data input:checked+.slider:before {
+    -webkit-transform: translateX(54px);
+    -ms-transform: translateX(54px);
+    transform: translateX(54px);
+}
+
+/* Rounded sliders */
+
+#label-data .slider.round {
+    border-radius: 34px;
+}
+
+#label-data .slider.round:before {
+    border-radius: 50%;
+}
+
+#addlabel .dropbtn {
     width: 200px;
     height: 30px;
     background-color: white;
@@ -197,7 +256,7 @@
     border-radius: 5px;
 }
 
-.dropbtn-show {
+#addlabel .dropbtn-show {
     width: 450px;
     height: 30px;
     background-color: white;
@@ -205,7 +264,7 @@
     border-radius: 5px;
 }
 
-.show {
+#addlabel .show {
     display: inline-block;
     position: absolute;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -217,26 +276,26 @@
     border-radius: 5px;
 }
 
-.dropdown-content {
+#addlabel .dropdown-content {
     display: none;
 }
 
-.wrapButtonText {
+#remarks .wrap-btn-text {
     position: relative;
 }
 
-.labeltextarea {
+#remarks .labeltextarea {
     width: 100%;
     padding: 4px;
     border: 1px solid #b2abab;
     border-radius: 5px;
 }
 
-.align-top {
+#remarks .align-top {
     vertical-align: top;
 }
 
-.buttonInsideText {
+#remarks .submit-btn {
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -269,7 +328,7 @@
     cursor: pointer;
 }
 
-.inputBox {
+#addlabel-content .inputBox {
     padding-left: 10px;
     font-size: 16px;
     border-radius: 5px;
@@ -278,7 +337,7 @@
     width: 280px;
 }
 
-.bottonSelectedComponent {
+#addlabel-content .bottonSelectedComponent {
     height: 35px;
     border-radius: 5px;
     background-color: #efefef;
@@ -286,7 +345,7 @@
     font-size: 16px;
 }
 
-.choosetextarea {
+#addlabel-content .choosetextarea {
     padding-left: 10px;
     font-size: 16px;
     border-radius: 5px;
@@ -299,11 +358,11 @@
 
 /* Annotations */
 
-.annotations {
+#annotations {
     font-size: 18px;
 }
 
-.annotationsbox {
+#annotations .annotations-box {
     color: rgb(151, 201, 249);
     border: 2px solid;
     border-color: rgba(255, 238, 0, 0.712);
@@ -313,89 +372,28 @@
     overflow: hidden;
 }
 
-.plusSymbol {
+#annotations .annotationsbox-font {
+    font-size: 16px;
+    color: rgba(0, 183, 255, 0.705);
+}
+
+#annotations .plus-symbol {
     color: #00C3FF;
 }
 
 
 /* History */
 
-.history {
-    /* width: 84%; */
+#history {
     font-size: 16px;
 }
 
-.unApprove {
+#history .unapprove {
     color: #EDA59A;
     font-weight: bold;
 }
 
-.approve {
+#history .approve {
     color: #89C18F;
     font-weight: bold;
 }
-
-
-/* Toggle Switch********************************************************************************/
-
-/* The switch - the box around the slider */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 80px;
-    height: 25px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {display:none;}
-  
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #DCDEE0;
-    border: 1px solid #BABAC0;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 18px;
-    width: 18px;
-    left: 3px;
-   top:2px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-
-  }
-  
-  input:checked + .slider {
-    background-color: #96EA9C;
-    border: 1px solid #70BF41;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(54px);
-    -ms-transform: translateX(54px);
-    transform: translateX(54px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }

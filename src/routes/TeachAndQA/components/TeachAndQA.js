@@ -52,7 +52,7 @@ export default class TeachAndQA extends React.Component {
     render() {
 
         return (
-            <div className='padding-10 fontArial'>
+            <div className='padding-10 fontHelvetica'>
                 <PageTitle />
                 <Divider style={dividerStyle} />
                 <DocumentInfo data={this.state.samplePaginationData} index={this.state.paginationIndex} incrementIndex={this.incrementIndex} decrementIndex={this.decrementIndex} />
@@ -70,9 +70,9 @@ export default class TeachAndQA extends React.Component {
 class PageTitle extends React.Component {
     render() {
         return (
-            <div className="pageTitle padding-15 fontArial">
-                <span className="pull-left fontStyle ">Special Provisions</span>
-                <span className="pull-right fontStyle">Teach & QA</span>
+            <div id="page-title" className="padding-15 fontHelvetica">
+                <span className="pull-left title-font ">Special Provisions</span>
+                <span className="pull-right title-font">Teach & QA</span>
             </div>
         )
     }
@@ -81,12 +81,12 @@ class PageTitle extends React.Component {
 class DocumentInfo extends React.Component {
     render() {
         return (
-            <div className="documentInfo padding-15" >
-                <div className="filename pull-left fontStyle2">{this.props.data[this.props.index].document_name}</div>
-                <div className={this.props.data[this.props.index].document_status == 'APPROVED' ? "filestatus fontStyle3approve" : "filestatus fontStyle3 "}>{this.props.data[this.props.index].document_status}</div>
+            <div id="document-info" className=" padding-15" >
+                <div className="file-name pull-left page-font">{this.props.data[this.props.index].document_name}</div>
+                <div className={this.props.data[this.props.index].document_status == 'APPROVED' ? "file-status document-approved" : "file-status document-unapproved "}>{this.props.data[this.props.index].document_status}</div>
                 <div className="pull-right pagination">
                     <div className="arrow-left pagination" onClick={() => this.props.decrementIndex()}></div>
-                    <span className='pagenumber padding-left-20 padding-right-20 fontStyle2'>{this.props.index + 1} of {this.props.data.length}</span>
+                    <span className='pagenumber padding-left-20 padding-right-20 page-font'>{this.props.index + 1} of {this.props.data.length}</span>
                     <div className="arrow-right pagination" onClick={() => this.props.incrementIndex()}></div>
                 </div>
             </div>
